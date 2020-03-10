@@ -3,7 +3,7 @@ import 'dart:io';
 
 import 'package:http/http.dart' as http;
 
-/// Get current DateTime snapshot from [internet](https://worldtimeapi.org)
+/// Get current DateTime from [internet](https://worldtimeapi.org)
 /// [timezone] Set a timezone. Use [Timezones]
 /// if null will return a timezone from public client ip
 Future<DateTime> fromInternet({String timezone}) async {
