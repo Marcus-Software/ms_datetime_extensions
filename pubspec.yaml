@@ -1,7 +1,7 @@
 name: ms_datetime_extensions
-description: A new Flutter package project.
-version: 0.1.0
-homepage: marcussoftware.info
+description: A simple and usefull lib to incremease DateTime with usefull functions
+version: 0.1.0+1
+homepage: https://github.com/Marcus-Software/ms_datetime_extensions
 
 environment:
   sdk: ">=2.7.0 <3.0.0"
