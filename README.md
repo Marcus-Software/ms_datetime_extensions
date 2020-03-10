@@ -1,14 +1,26 @@
-# ms_datetime_extensions
+# Overview [![Pub](https://img.shields.io/pub/v/ms_datetime_extensions.svg)](https://pub.dartlang.org/packages/ms_datetime_extensions) ![GitHub stars](https://img.shields.io/github/stars/Marcus-Software/ms_datetime_extensions?style=social)
 
-A new Flutter package project.
+A simple lib to incremease DateTime with usefull functions
 
-## Getting Started
+## Whats Ms_DateTime_Extensions do
 
-This project is a starting point for a Dart
-[package](https://flutter.dev/developing-packages/),
-a library module containing code that can be shared easily across
-multiple Flutter or Dart projects.
+Add usefull functions to DateTime:
 
-For help getting started with Flutter, view our 
-[online documentation](https://flutter.dev/docs), which offers tutorials, 
-samples, guidance on mobile development, and a full API reference.
+- `nextWeekday` return a new DateTime to a next weekday
+- `fromInternet` fetch a DateTime from internet
+
+## Usage
+
+Just import lib and use [extensions](https://dart.dev/guides/language/extension-methods), call the functions to starts work:
+
+```dart
+import 'package:ms_datetime_extensions/ms_datetime_extensions.dart';
+
+  var xmas = DateTime(2020, 12, 25, 15, 00); // Friday 25 december of 2020
+  var nextFriday =
+      xmas.nextWeekday(DateTime.friday); // Friday 01 january of 2021
+  print(nextFriday);
+
+  var mDateTimeFromInternet = await dateTimeFromInternet();
+
+```
