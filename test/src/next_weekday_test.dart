@@ -1,5 +1,5 @@
 import 'package:ms_datetime_extensions/ms_datetime_extensions.dart';
-import 'package:flutter_test/flutter_test.dart';
+import 'package:test/test.dart';
 
 void main() {
   test('Return a valid date', () {

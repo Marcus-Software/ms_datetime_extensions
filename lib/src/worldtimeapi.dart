@@ -16,6 +16,7 @@ Future<DateTime> dateTimeFromInternet({String timezone}) async {
   return DateTime.parse(json['datetime'] as String).toLocal();
 }
 
+/// [Timezones] provides a shotcut way to set timezone for [dateTimeFromInternet]
 class Timezones {
   static final String africaAbidjan = 'Africa/Abidjan';
   static final String africaAccra = 'Africa/Accra';
