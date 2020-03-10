@@ -4,7 +4,7 @@ import 'package:flutter_test/flutter_test.dart';
 void main() {
   test('Must return a valid datetime', () async {
     var nowFromInternet =
-        await fromInternet(timezone: Timezones.americaSaoPaulo);
+        await dateTimeFromInternet(timezone: Timezones.americaSaoPaulo);
     expect(nowFromInternet, isNotNull);
     expect(nowFromInternet.timeZoneOffset, Duration(hours: -3));
   });

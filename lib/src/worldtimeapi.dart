@@ -6,13 +6,14 @@ import 'package:http/http.dart' as http;
 /// Get current DateTime from [internet](https://worldtimeapi.org)
 /// [timezone] Set a timezone. Use [Timezones]
 /// if null will return a timezone from public client ip
-Future<DateTime> fromInternet({String timezone}) async {
+Future<DateTime> dateTimeFromInternet({String timezone}) async {
   var response = await http.get(
       "https://worldtimeapi.org/api/${timezone != null ? 'timezone/$timezone' : 'ip'}");
   var json = jsonDecode(response.body);
-  if (response.statusCode != 200)
+  if (response.statusCode != 200) {
     throw HttpException(response.body, uri: response.request.url);
-  return DateTime.parse(json['datetime']).toLocal();
+  }
+  return DateTime.parse(json['datetime'] as String).toLocal();
 }
 
 class Timezones {
