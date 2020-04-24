@@ -8,6 +8,8 @@ Add usefull functions to DateTime:
 
 - `nextWeekday` return a new DateTime to a next weekday
 - `fromInternet` fetch a DateTime from internet
+- `isAtSame[second,minute,hour,day,mount,year]` return true when compare datetime to other
+- `isAtToday` return true if DateTime is today
 
 ## Usage
 
@@ -24,3 +26,5 @@ import 'package:ms_datetime_extensions/ms_datetime_extensions.dart';
   var mDateTimeFromInternet = await dateTimeFromInternet();
 
 ```
+
+This lib use thirtpart API visite to know more [worldtimeapi](https://worldtimeapi.org)
