@@ -10,6 +10,7 @@ Add usefull functions to DateTime:
 - `fromInternet` fetch a DateTime from internet
 - `isAtSame[second,minute,hour,day,mount,year]` return true when compare datetime to other
 - `isAtToday` return true if DateTime is today
+- `copyWith` return a new DateTime with new values
 
 ## Usage
 
@@ -25,6 +26,7 @@ import 'package:ms_datetime_extensions/ms_datetime_extensions.dart';
 
   var mDateTimeFromInternet = await dateTimeFromInternet();
 
+  var endYear = xmas.copyWith(day: 0); // Thursday 31 dezember of 2020
 ```
 
 This lib use thirtpart API visite to know more [worldtimeapi](https://worldtimeapi.org)

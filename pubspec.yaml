@@ -1,6 +1,6 @@
 name: ms_datetime_extensions
 description: A simple and usefull lib to incremease DateTime with usefull functions
-version: 0.2.0
+version: 0.3.0
 homepage: https://github.com/Marcus-Software/ms_datetime_extensions
 
 environment:

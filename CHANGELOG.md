@@ -1,5 +1,9 @@
 # Changelog
 
+## [0.3.0] - 24/04/2020
+
+* copyWith create a new DateTime with new values
+
 ## [0.2.0] - 24/04/2020
 
 * some functions to chech if a datetime is the same second, minute, hour, day, mount or year

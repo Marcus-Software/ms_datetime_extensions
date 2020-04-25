@@ -1,5 +1,6 @@
 library ms_datetime_extensions;
 
+import 'package:ms_datetime_extensions/src/copy_with.dart';
 import 'package:ms_datetime_extensions/src/next_weekday.dart';
 import 'package:ms_datetime_extensions/src/worldtimeapi.dart';
 import 'package:ms_datetime_extensions/src/is_at_moment.dart';
@@ -7,6 +8,7 @@ import 'package:ms_datetime_extensions/src/is_at_moment.dart';
 export 'package:ms_datetime_extensions/src/worldtimeapi.dart';
 export 'package:ms_datetime_extensions/src/next_weekday.dart';
 export 'package:ms_datetime_extensions/src/is_at_moment.dart';
+export 'package:ms_datetime_extensions/src/copy_with.dart';
 
 var _nextWeekday = nextWeekday;
 var _fromInternet = dateTimeFromInternet;
@@ -17,6 +19,7 @@ var _isAtHour = isAtSameHour;
 var _isAtDay = isAtSameDay;
 var _isAtMounth = isAtSameMounth;
 var _isAtYear = isAtSameYear;
+var _copyWith = copyWith;
 
 extension MsDateTimeExtensions on DateTime {
   /// Return a new instance [DateTime] with next weekday
@@ -50,4 +53,27 @@ extension MsDateTimeExtensions on DateTime {
 
   /// Return true if [other] is happenen on the same year
   bool isAtSameYear(DateTime other) => _isAtYear(this, other);
+
+  /// Return a new instance of DateTime with new values
+  DateTime copyWith({
+    int year,
+    int month,
+    int day,
+    int hour,
+    int minute,
+    int second,
+    int millisecond,
+    int microsecond,
+  }) =>
+      _copyWith(
+        this,
+        year: year,
+        month: month,
+        day: day,
+        hour: hour,
+        minute: minute,
+        second: second,
+        millisecond: millisecond,
+        microsecond: microsecond,
+      );
 }
