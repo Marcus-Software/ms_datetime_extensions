@@ -8,7 +8,9 @@ import 'package:ms_datetime_extensions/src/is_at_moment.dart';
 export 'package:ms_datetime_extensions/src/worldtimeapi.dart';
 export 'package:ms_datetime_extensions/src/next_weekday.dart';
 export 'package:ms_datetime_extensions/src/is_at_moment.dart';
-export 'package:ms_datetime_extensions/src/copy_with.dart';
+export 'package:ms_datetime_extensions/src/next_weekday.dart';
+export 'package:ms_datetime_extensions/src/previous_day_of_the_week.dart';
+export 'package:ms_datetime_extensions/src/worldtimeapi.dart';
 
 var _nextWeekday = nextWeekday;
 var _fromInternet = dateTimeFromInternet;
@@ -19,13 +21,19 @@ var _isAtHour = isAtSameHour;
 var _isAtDay = isAtSameDay;
 var _isAtMounth = isAtSameMounth;
 var _isAtYear = isAtSameYear;
-var _copyWith = copyWith;
+var _nextDayOfTheWeek = nextDayOfTheWeek;
 
 extension MsDateTimeExtensions on DateTime {
   /// Return a new instance [DateTime] with next weekday
   ///
   /// [weekday] use 1 for Sunday .. 7 for Saturday
-  DateTime nextWeekday(int weekday) => _nextWeekday(this, weekday);
+  @deprecated
+  DateTime nextWeekday(int weekday) => _nextDayOfTheWeek(this, weekday);
+
+  /// Return a new instance [DateTime] with next weekday
+  ///
+  /// [weekday] use 1 for Sunday .. 7 for Saturday
+  DateTime nextDayOfTheWeek(int weekday) => _nextDayOfTheWeek(this, weekday);
 
   /// Get current DateTime from [internet](https://worldtimeapi.org)
   /// [timeZoneName] Set a timezone. Use [Timezones]
