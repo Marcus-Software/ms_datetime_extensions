@@ -1,16 +1,22 @@
-# Overview [![Pub](https://img.shields.io/pub/v/ms_datetime_extensions.svg)](https://pub.dartlang.org/packages/ms_datetime_extensions) ![GitHub stars](https://img.shields.io/github/stars/Marcus-Software/ms_datetime_extensions?style=social)
+# Overview 
+[![Pub](https://img.shields.io/pub/v/ms_datetime_extensions.svg)](https://pub.dartlang.org/packages/ms_datetime_extensions)
+[![GitHub stars](https://img.shields.io/github/stars/Marcus-Software/ms_datetime_extensions?style=social)](https://github.com/Marcus-Software/ms_datetime_extensions)
+<span class="badge-buymeacoffee">
+<a href="https://www.buymeacoffee.com/marcusedu" title="Donate to this project using Buy Me A Coffee"><img src="https://img.shields.io/badge/buy%20me%20a%20coffee-donate-yellow.svg" alt="Buy Me A Coffee donate button" /></a>
+</span>
 
-A simple lib to incremease DateTime with usefull functions
+A simple lib to augment the DateTime with useful functions
 
-## Whats Ms_DateTime_Extensions do
+## What's ms_datetime_extensions do
 
 Add usefull functions to DateTime:
 
-- `nextWeekday` return a new DateTime to a next weekday
-- `fromInternet` fetch a DateTime from internet
-- `isAtSame[second,minute,hour,day,mount,year]` return true when compare datetime to other
-- `isAtToday` return true if DateTime is today
 - `copyWith` return a new DateTime with new values
+- `fromInternet` fetch a DateTime from internet
+- `isAtSame[second,minute,hour,day,month,year]` return true when compare datetime to other
+- `isAtToday` return true if DateTime is today
+- `nextDayOfTheWeek` return a new DateTime to a next weekday
+- `previousDayOfTheWeek` return a new DateTime to a previous day of the weekday
 
 ## Usage
 
@@ -29,4 +35,4 @@ import 'package:ms_datetime_extensions/ms_datetime_extensions.dart';
   var endYear = xmas.copyWith(day: 0); // Thursday 31 dezember of 2020
 ```
 
-This lib use thirtpart API visite to know more [worldtimeapi](https://worldtimeapi.org)
+This lib use thirtpart API visite [worldtimeapi](https://worldtimeapi.org) to know more

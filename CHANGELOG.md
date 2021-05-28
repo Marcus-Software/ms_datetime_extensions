@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.0.0] - 09/10/2020
+
+* previousDayOfTheWeek
+* Null safety mode
+
+#### break changes
+- the method `isSameMount` is renamed to `isSameMonth` 
+
 ## [0.3.0] - 24/04/2020
 
 * copyWith create a new DateTime with new values

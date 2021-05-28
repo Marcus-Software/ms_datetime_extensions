@@ -18,4 +18,10 @@ void main() {
   test('must return a valid xmas middle day DateTime', () {
     expect(xmas.copyWith(hour: 12, minute: 0), DateTime(2020, 12, 25, 12, 00));
   });
+
+  test('end month', () {
+    for (var i = 1; i < 31; i++) {
+      expect(DateTime(2020, 4, i).copyWith(day: 0), DateTime(2020, 4, 30));
+    }
+  });
 }

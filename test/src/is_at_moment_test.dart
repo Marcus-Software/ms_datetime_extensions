@@ -9,9 +9,9 @@ void main() {
     expect(isAtSameDay(dateTime1, dateTime2), isTrue);
     expect(isAtSameDay(dateTime1, dateTime2.add(Duration(days: 3))), isFalse);
 
-    expect(isAtSameMounth(dateTime1, dateTime2.add(Duration(days: 3))), isTrue);
+    expect(isAtSameMonth(dateTime1, dateTime2.add(Duration(days: 3))), isTrue);
     expect(
-        isAtSameMounth(dateTime1, dateTime2.add(Duration(days: 90))), isFalse);
+        isAtSameMonth(dateTime1, dateTime2.add(Duration(days: 90))), isFalse);
 
     expect(isAtSameYear(dateTime1, dateTime2.add(Duration(days: 90))), isTrue);
     expect(
