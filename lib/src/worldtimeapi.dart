@@ -7,7 +7,8 @@ import 'package:http/http.dart' as http;
 /// if null will return a timezone from public client ip
 Future<DateTime> dateTimeFromInternet({String timezone}) async {
   var response = await http.get(
-      "https://worldtimeapi.org/api/${timezone != null ? 'timezone/$timezone' : 'ip'}",
+      Uri.parse(
+          "https://worldtimeapi.org/api/${timezone != null ? 'timezone/$timezone' : 'ip'}"),
       headers: {'accept': 'application/json'});
   var json = jsonDecode(response.body);
   if (response.statusCode != 200) {
