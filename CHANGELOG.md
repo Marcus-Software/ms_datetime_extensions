@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.1.0] - 30/06/2021
+
+* Using https is optional when try get datetime from the internet
+
 ## [1.0.0] - 09/10/2020
 
 * previousDayOfTheWeek
